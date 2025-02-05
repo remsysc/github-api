@@ -51,7 +51,7 @@ public class GithubApiApplication implements  CommandLineRunner{
 		// Build the request
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(URI.create(GITHUB_API_URL + username + "/events"))
-				.header("Accept", "application/json")
+				.header("Accept", "application/vnd.github+json")
 				.GET()
 				.build();
 
